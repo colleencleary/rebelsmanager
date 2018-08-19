@@ -1,0 +1,1073 @@
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.308440'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.308440')
+[19/Aug/2018 12:45:44] DEBUG [django.template:878] Exception while resolving variable 'is_authenticated' in template 'blog/post_list.html'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:45:44] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 307, in render
+    match = condition.eval(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 880, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.651202'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.651202')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.653266'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.653266')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.655146'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.655146')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:45:43.920359' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:45:43.920359',)
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.308440') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.308440')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.308440') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.308440')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.308440') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.308440')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.308440') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.308440')
+[19/Aug/2018 12:45:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:45:44.693770'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:45:44.693770')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.138957'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.138957')
+[19/Aug/2018 12:46:44] DEBUG [django.template:878] Exception while resolving variable 'is_authenticated' in template 'blog/post_list.html'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:46:44] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 307, in render
+    match = condition.eval(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 880, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.285828'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.285828')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.287255'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.287255')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.288451'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.288451')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:46:44.046001' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:46:44.046001',)
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.138957') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.138957')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.138957') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.138957')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.138957') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.138957')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.138957') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.138957')
+[19/Aug/2018 12:46:44] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:46:44.320641'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:46:44.320641')
+[19/Aug/2018 12:50:55] DEBUG [django.db.backends:111] (0.021) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[19/Aug/2018 12:50:55] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'owner'; args=('owner',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.218656'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.218656')
+[19/Aug/2018 12:52:06] DEBUG [django.template:878] Exception while resolving variable 'is_authenticated' in template 'blog/post_list.html'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:52:06] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 307, in render
+    match = condition.eval(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 880, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.372043'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.372043')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.373628'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.373628')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.374790'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.374790')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:52:06.128837' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:52:06.128837',)
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.218656') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.218656')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.218656') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.218656')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.218656') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.218656')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.218656') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.218656')
+[19/Aug/2018 12:52:06] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:06.406537'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:06.406537')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.820655'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.820655')
+[19/Aug/2018 12:52:12] ERROR [django.request:118] Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 241, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 212, in inner
+    if not self.has_permission(request):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 186, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.908043'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.908043')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.910008'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.910008')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.820655') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.820655')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.820655') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.820655')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.820655') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.820655')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.820655') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.820655')
+[19/Aug/2018 12:52:12] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:52:12.922965'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:52:12.922965')
+[19/Aug/2018 12:52:41] DEBUG [django.db.backends:111] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[19/Aug/2018 12:52:41] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'owner'; args=('owner',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.054871'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.054871')
+[19/Aug/2018 12:54:00] DEBUG [django.template:878] Exception while resolving variable 'is_authenticated' in template 'blog/post_list.html'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:54:00] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 307, in render
+    match = condition.eval(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 880, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.230866'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.230866')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.232508'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.232508')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.234369'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.234369')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:53:59.888392' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:53:59.888392',)
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.054871') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.054871')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.054871') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.054871')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.054871') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.054871')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.054871') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.054871')
+[19/Aug/2018 12:54:00] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:54:00.265701'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:54:00.265701')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.822777'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.822777')
+[19/Aug/2018 12:55:46] DEBUG [django.template:878] Exception while resolving variable 'is_authenticated' in template 'blog/post_list.html'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:55:46] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 307, in render
+    match = condition.eval(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 880, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/utils/functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 210, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1063, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.933179'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.933179')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.946238'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.946238')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.948493'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.948493')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 16:55:46.797704' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 16:55:46.797704',)
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.822777') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.822777')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21; args=()
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.822777') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.822777')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.822777') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.822777')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.822777') LIMIT 21; args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.822777')
+[19/Aug/2018 12:55:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 16:55:46.999284'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 16:55:46.999284')
