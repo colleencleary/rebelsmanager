@@ -1,22 +1,25 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <meta charset="utf-8">
+        <title>Rebels Manager</title>
+        <link rel="shortcut icon" href="http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/skate.png">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+        <link rel="stylesheet" href="{% static '/css/main.css' %}">
     </head>
-    <body>
-        <div class="page-header">
+    <body class="custom-background">
+        <header>
+          <div class="row">
+          <a href="http://www.longislandrollerrebels.org"><img src="http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/lirr-logo.png" style="width:200px; height:128px" alt="LONG ISLAND ROLLER REBELS"></a>
+          <h1><a href="/">Rebels Manager</a></h1>
+        </div>
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
                 <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}?next=/">Log out</a>)</small></p>
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
+        </header>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">

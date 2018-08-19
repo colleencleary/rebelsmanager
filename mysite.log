@@ -2416,3 +2416,567 @@ django.db.utils.OperationalError: no such table: django_session
 [19/Aug/2018 13:03:49] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
 [19/Aug/2018 13:03:49] DEBUG [django.db.backends:111] (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add post', 7, 'add_post' UNION ALL SELECT 'Can change post', 7, 'change_post' UNION ALL SELECT 'Can delete post', 7, 'delete_post' UNION ALL SELECT 'Can add comment', 8, 'add_comment' UNION ALL SELECT 'Can change comment', 8, 'change_comment' UNION ALL SELECT 'Can delete comment', 8, 'delete_comment'; args=('Can add post', 7, 'add_post', 'Can change post', 7, 'change_post', 'Can delete post', 7, 'delete_post', 'Can add comment', 8, 'add_comment', 'Can change comment', 8, 'change_comment', 'Can delete comment', 8, 'delete_comment')
 [19/Aug/2018 13:03:49] DEBUG [django.db.backends:111] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'blog'; args=('blog',)
+[19/Aug/2018 13:05:06] DEBUG [django.db.backends:111] (0.008) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zfp3cvo76vb8bkzwlvda8qwsacojimp9' AND "django_session"."expire_date" > '2018-08-19 17:05:06.080482'); args=('zfp3cvo76vb8bkzwlvda8qwsacojimp9', '2018-08-19 17:05:06.080482')
+[19/Aug/2018 13:05:06] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:05:05.938254' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:05:05.938254',)
+[19/Aug/2018 13:05:16] DEBUG [django.db.backends:111] (0.022) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:16] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:20] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:20] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:31] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:31] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:36] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:05:36] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:06:10] DEBUG [django.db.backends:111] (0.004) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:06:10] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:06:17] DEBUG [django.db.backends:111] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:06:17] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:06:48] DEBUG [django.db.backends:111] (0.008) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[19/Aug/2018 13:06:48] DEBUG [django.db.backends:111] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[19/Aug/2018 13:06:48] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'owner'; args=('owner',)
+[19/Aug/2018 13:06:53] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:07:00] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:00] DEBUG [django.db.backends:111] (0.065) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$100000$q2mXoK1QERqR$/Q1ZnOqZcp4WJANPAnxnpd5M5dU0qMVL52nz6AHqObU=', NULL, 1, 'mars667', '', '', '', 1, 1, '2018-08-19 17:07:00.615849'); args=['pbkdf2_sha256$100000$q2mXoK1QERqR$/Q1ZnOqZcp4WJANPAnxnpd5M5dU0qMVL52nz6AHqObU=', None, True, 'mars667', '', '', '', True, True, '2018-08-19 17:07:00.615849']
+[19/Aug/2018 13:07:10] DEBUG [django.db.backends:111] (0.013) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:10.689431' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:10.689431',)
+[19/Aug/2018 13:07:12] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:12.525610' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:12.525610',)
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'mars667'; args=('mars667',)
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.012) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' LIMIT 1; args=('cd59006gakkr6s8fdd5pubick3drvym0',)
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.022) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'cd59006gakkr6s8fdd5pubick3drvym0', 'MGMyZWI5NjgwMzI2ZTg1ZmI2MmZjOTM2ZjI0YjIzZjg5NjkwYWJjNzp7fQ==', '2018-09-02 17:07:20.493065'; args=('cd59006gakkr6s8fdd5pubick3drvym0', 'MGMyZWI5NjgwMzI2ZTg1ZmI2MmZjOTM2ZjI0YjIzZjg5NjkwYWJjNzp7fQ==', '2018-09-02 17:07:20.493065')
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.004) UPDATE "auth_user" SET "last_login" = '2018-08-19 17:07:20.519796' WHERE "auth_user"."id" = 1; args=('2018-08-19 17:07:20.519796', 1)
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) UPDATE "django_session" SET "session_data" = 'YmFmZDhmY2FiN2RlYTBkMjEwZTcyZmNmZGE4MWZjOGQ1ODY3NDQ2NDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNGE1ZGQwNTAxZjUxYmNiMjMwYzRmOTVhNWI5ZWZiZjVlZDQxYTQ0In0=', "expire_date" = '2018-09-02 17:07:20.528583' WHERE "django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0'; args=('YmFmZDhmY2FiN2RlYTBkMjEwZTcyZmNmZGE4MWZjOGQ1ODY3NDQ2NDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNGE1ZGQwNTAxZjUxYmNiMjMwYzRmOTVhNWI5ZWZiZjVlZDQxYTQ0In0=', '2018-09-02 17:07:20.528583', 'cd59006gakkr6s8fdd5pubick3drvym0')
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:20.540951'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:20.540951')
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:20] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:20.537129' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:20.537129',)
+[19/Aug/2018 13:07:23] DEBUG [django.db.backends:111] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:23.308655'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:23.308655')
+[19/Aug/2018 13:07:23] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:29.900023'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:29.900023')
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.019) INSERT INTO "blog_post" ("author_id", "title", "text", "created_date", "published_date") VALUES (1, 'please work', 'thanks', '2018-08-19 17:07:29.925707', '2018-08-19 17:07:29.926032'); args=[1, 'please work', 'thanks', '2018-08-19 17:07:29.925707', '2018-08-19 17:07:29.926032']
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:29.976003'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:29.976003')
+[19/Aug/2018 13:07:29] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:30] DEBUG [django.db.backends:111] (0.000) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."post_id" = 1; args=(1,)
+[19/Aug/2018 13:07:31] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:31] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:31.573665'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:31.573665')
+[19/Aug/2018 13:07:31] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.001) INSERT INTO "blog_comment" ("post_id", "author", "text", "created_date", "approved_comment") VALUES (1, 'me', 'yay!', '2018-08-19 17:07:36.755983', 0); args=[1, 'me', 'yay!', '2018-08-19 17:07:36.755983', False]
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:36.772819'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:36.772819')
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:36] DEBUG [django.db.backends:111] (0.000) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."post_id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:43.188390'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:43.188390')
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) UPDATE "blog_comment" SET "post_id" = 1, "author" = 'me', "text" = 'yay!', "created_date" = '2018-08-19 17:07:36.755983', "approved_comment" = 1 WHERE "blog_comment"."id" = 1; args=(1, 'me', 'yay!', '2018-08-19 17:07:36.755983', True, 1)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:43.222779'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:43.222779')
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:43] DEBUG [django.db.backends:111] (0.000) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."post_id" = 1; args=(1,)
+[19/Aug/2018 13:07:44] DEBUG [django.db.backends:111] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:44.723001'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:44.723001')
+[19/Aug/2018 13:07:44] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:44] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:44.719688' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:44.719688',)
+[19/Aug/2018 13:07:44] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0' AND "django_session"."expire_date" > '2018-08-19 17:07:46.281527'); args=('cd59006gakkr6s8fdd5pubick3drvym0', '2018-08-19 17:07:46.281527')
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'cd59006gakkr6s8fdd5pubick3drvym0'; args=('cd59006gakkr6s8fdd5pubick3drvym0',)
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) BEGIN; args=None
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('cd59006gakkr6s8fdd5pubick3drvym0'); args=('cd59006gakkr6s8fdd5pubick3drvym0',)
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:46.298235' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:46.298235',)
+[19/Aug/2018 13:07:46] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:07:48] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 13:07:48] DEBUG [django.db.backends:111] (0.000) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."post_id" = 1; args=(1,)
+[19/Aug/2018 13:07:51] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:07:51.556318' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:07:51.556318',)
+[19/Aug/2018 13:07:51] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:11:16] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:11:16.741270' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:11:16.741270',)
+[19/Aug/2018 13:11:16] DEBUG [django.db.backends:111] (0.022) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:13:38] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:13:38.479724' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:13:38.479724',)
+[19/Aug/2018 13:13:38] DEBUG [django.db.backends:111] (0.045) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:18:38] DEBUG [django.db.backends:111] (0.003) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:18:38.871781' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:18:38.871781',)
+[19/Aug/2018 13:18:38] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:20:42] DEBUG [django.db.backends:111] (0.002) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:20:42.896280' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:20:42.896280',)
+[19/Aug/2018 13:20:42] DEBUG [django.db.backends:111] (0.001) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:21:32] DEBUG [django.db.backends:111] (0.024) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:21:32.040204' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:21:32.040204',)
+[19/Aug/2018 13:21:32] DEBUG [django.db.backends:111] (0.024) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 13:23:51] DEBUG [django.db.backends:111] (0.002) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 17:23:51.183942' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 17:23:51.183942',)
+[19/Aug/2018 13:23:51] DEBUG [django.db.backends:111] (0.014) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 15:51:43] DEBUG [django.db.backends:111] (0.112) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 19:51:42.994676' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 19:51:42.994676',)
+[19/Aug/2018 15:51:44] DEBUG [django.db.backends:111] (0.074) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 15:51:44] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 19:51:44.197623' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 19:51:44.197623',)
+[19/Aug/2018 15:51:44] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 15:53:07] DEBUG [django.db.backends:111] (0.086) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 19:53:05.400064' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 19:53:05.400064',)
+[19/Aug/2018 15:53:08] DEBUG [django.db.backends:111] (0.082) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 15:53:17] DEBUG [django.db.backends:111] (0.103) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 19:53:16.901309' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 19:53:16.901309',)
+[19/Aug/2018 15:53:17] DEBUG [django.db.backends:111] (0.061) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:04:40] DEBUG [django.template:878] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '' [name='post_list']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/' [name='post_detail']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/new' [name='post_new']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/edit/' [name='post_edit']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/remove/$' [name='post_remove']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/comment/$' [name='add_comment_to_post']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/approve/$' [name='comment_approve']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/remove/$' [name='comment_remove']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>], [<URLPattern '^accounts/login/$' [name='login']>], [<URLPattern '^accounts/logout/$' [name='logout']>]], 'path': 'js/app.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+[19/Aug/2018 16:04:40] DEBUG [django.template:878] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '' [name='post_list']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/' [name='post_detail']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/new' [name='post_new']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/edit/' [name='post_edit']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/remove/$' [name='post_remove']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/comment/$' [name='add_comment_to_post']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/approve/$' [name='comment_approve']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/remove/$' [name='comment_remove']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>], [<URLPattern '^accounts/login/$' [name='login']>], [<URLPattern '^accounts/logout/$' [name='logout']>]], 'path': 'js/app.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+[19/Aug/2018 16:04:40] WARNING [django.request:93] Not Found: /js/app.js
+[19/Aug/2018 16:05:20] DEBUG [django.template:878] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '' [name='post_list']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/' [name='post_detail']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/new' [name='post_new']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/edit/' [name='post_edit']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/remove/$' [name='post_remove']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/comment/$' [name='add_comment_to_post']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/approve/$' [name='comment_approve']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/remove/$' [name='comment_remove']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>], [<URLPattern '^accounts/login/$' [name='login']>], [<URLPattern '^accounts/logout/$' [name='logout']>]], 'path': 'js/app.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+[19/Aug/2018 16:05:20] DEBUG [django.template:878] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '' [name='post_list']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/' [name='post_detail']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/new' [name='post_new']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern 'post/<int:pk>/edit/' [name='post_edit']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/remove/$' [name='post_remove']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^post/(?P<pk>\d+)/comment/$' [name='add_comment_to_post']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/approve/$' [name='comment_approve']>], [<URLResolver <module 'blog.urls' from '/Users/Owner/dev/django_apps/rebelsmanager/blog/urls.py'> (None:None) ''>, <URLPattern '^comment/(?P<pk>\d+)/remove/$' [name='comment_remove']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>], [<URLPattern '^accounts/login/$' [name='login']>], [<URLPattern '^accounts/logout/$' [name='logout']>]], 'path': 'js/app.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+[19/Aug/2018 16:05:20] WARNING [django.request:93] Not Found: /js/app.js
+[19/Aug/2018 16:46:38] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:46:38.121293' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:46:38.121293',)
+[19/Aug/2018 16:46:38] DEBUG [django.db.backends:111] (0.010) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:48:18] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."id" = 1; args=(1,)
+[19/Aug/2018 16:48:18] DEBUG [django.db.backends:111] (0.024) SELECT "blog_comment"."id", "blog_comment"."post_id", "blog_comment"."author", "blog_comment"."text", "blog_comment"."created_date", "blog_comment"."approved_comment" FROM "blog_comment" WHERE "blog_comment"."post_id" = 1; args=(1,)
+[19/Aug/2018 16:48:22] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:48:22.381099' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:48:22.381099',)
+[19/Aug/2018 16:48:22] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:50:39] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:50:39.195516' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:50:39.195516',)
+[19/Aug/2018 16:50:39] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:52:22] DEBUG [django.db.backends:111] (0.026) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:52:22.824009' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:52:22.824009',)
+[19/Aug/2018 16:52:22] DEBUG [django.db.backends:111] (0.015) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:53:09] DEBUG [django.db.backends:111] (0.086) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:53:07.876217' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:53:07.876217',)
+[19/Aug/2018 16:53:09] DEBUG [django.db.backends:111] (0.060) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:53:58] DEBUG [django.db.backends:111] (0.049) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:53:58.670609' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:53:58.670609',)
+[19/Aug/2018 16:53:58] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:54:00] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:54:00.523785' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:54:00.523785',)
+[19/Aug/2018 16:54:00] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:55:51] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:55:51.720635' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:55:51.720635',)
+[19/Aug/2018 16:55:51] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:56:02] DEBUG [django.db.backends:111] (0.036) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:56:02.925964' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:56:02.925964',)
+[19/Aug/2018 16:56:03] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:58:27] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:58:27.904294' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:58:27.904294',)
+[19/Aug/2018 16:58:27] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:58:30] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:58:30.902626' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:58:30.902626',)
+[19/Aug/2018 16:58:30] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 16:59:38] DEBUG [django.db.backends:111] (0.024) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 20:59:38.265611' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 20:59:38.265611',)
+[19/Aug/2018 16:59:38] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:00:06] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:00:06.477718' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:00:06.477718',)
+[19/Aug/2018 17:00:06] DEBUG [django.db.backends:111] (0.020) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:00:15] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:00:15.726682' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:00:15.726682',)
+[19/Aug/2018 17:00:15] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:00:27] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:00:27.425817' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:00:27.425817',)
+[19/Aug/2018 17:00:27] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:00:36] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:00:36.703705' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:00:36.703705',)
+[19/Aug/2018 17:00:36] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:07:55] DEBUG [django.db.backends:111] (0.003) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:07:55.490507' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:07:55.490507',)
+[19/Aug/2018 17:07:55] DEBUG [django.db.backends:111] (0.026) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:08:34] DEBUG [django.db.backends:111] (0.079) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:08:33.935792' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:08:33.935792',)
+[19/Aug/2018 17:08:34] DEBUG [django.db.backends:111] (0.046) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:08:40] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:08:40.728277' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:08:40.728277',)
+[19/Aug/2018 17:08:40] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:09:55] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:09:55.310514' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:09:55.310514',)
+[19/Aug/2018 17:09:55] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:09:57] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:09:57.814928' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:09:57.814928',)
+[19/Aug/2018 17:09:57] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:10:32] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:10:32.587274' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:10:32.587274',)
+[19/Aug/2018 17:10:32] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:11:28] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:11:28.523329' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:11:28.523329',)
+[19/Aug/2018 17:11:28] DEBUG [django.db.backends:111] (0.014) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:13:47] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:13:47.234885' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:13:47.234885',)
+[19/Aug/2018 17:13:47] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:14:11] DEBUG [django.db.backends:111] (0.011) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:14:10.943850' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:14:10.943850',)
+[19/Aug/2018 17:14:11] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:14:33] DEBUG [django.db.backends:111] (0.037) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:14:33.286506' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:14:33.286506',)
+[19/Aug/2018 17:14:33] DEBUG [django.db.backends:111] (0.020) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:16:19] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:16:19.703224' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:16:19.703224',)
+[19/Aug/2018 17:16:19] DEBUG [django.db.backends:111] (0.018) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:16:25] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:16:25.022220' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:16:25.022220',)
+[19/Aug/2018 17:16:25] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:23:53] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/smartif.py", line 175, in translate_token
+    op = OPERATORS[token]
+KeyError: '!user.is_authenticated'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 955, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 888, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/smartif.py", line 166, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/smartif.py", line 177, in translate_token
+    return self.create_var(token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 891, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '!user.is_authenticated' from '!user.is_authenticated'
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.009) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:23:53] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:23:53.077728' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:23:53.077728',)
+[19/Aug/2018 17:24:40] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 970, in do_if
+    nodelist = parser.parse(('endif',))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 229, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:24:40] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:24:40.677226' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:24:40.677226',)
+[19/Aug/2018 17:25:24] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Owner/dev/django_apps/rebelsmanager/blog/views.py", line 16, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/defaulttags.py", line 970, in do_if
+    nodelist = parser.parse(('endif',))
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Owner/.local/share/virtualenvs/rebelsmanager-1bsFuQgQ/lib/python3.6/site-packages/django/template/loader_tags.py", line 229, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:25:24] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:25:24.731952' ORDER BY "blog_post"."published_date" DESC LIMIT 21; args=('2018-08-19 21:25:24.731952',)
+[19/Aug/2018 17:27:23] DEBUG [django.db.backends:111] (0.003) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:27:23.121583' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:27:23.121583',)
+[19/Aug/2018 17:27:23] DEBUG [django.db.backends:111] (0.012) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:27:35] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:27:35.975654' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:27:35.975654',)
+[19/Aug/2018 17:27:35] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:27:59] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:27:59.912314' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:27:59.912314',)
+[19/Aug/2018 17:27:59] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:28:07] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:28:07.949242' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:28:07.949242',)
+[19/Aug/2018 17:28:07] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:28:31] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:28:31.486618' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:28:31.486618',)
+[19/Aug/2018 17:28:31] DEBUG [django.db.backends:111] (0.004) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:30:18] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:30:18.457363' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:30:18.457363',)
+[19/Aug/2018 17:30:18] DEBUG [django.db.backends:111] (0.018) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:30:29] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:30:29.681323' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:30:29.681323',)
+[19/Aug/2018 17:30:29] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:30:39] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:30:39.597766' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:30:39.597766',)
+[19/Aug/2018 17:30:39] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:30:42] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:30:42.116554' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:30:42.116554',)
+[19/Aug/2018 17:30:42] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:31:02] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:31:02.291004' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:31:02.291004',)
+[19/Aug/2018 17:31:02] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:31:16] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:31:16.102905' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:31:16.102905',)
+[19/Aug/2018 17:31:16] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:32:20] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:32:20.893989' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:32:20.893989',)
+[19/Aug/2018 17:32:20] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:32:53] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:32:53.742860' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:32:53.742860',)
+[19/Aug/2018 17:32:53] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:33:11] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:33:11.717945' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:33:11.717945',)
+[19/Aug/2018 17:33:11] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:33:18] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:33:18.528960' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:33:18.528960',)
+[19/Aug/2018 17:33:18] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:33:42] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:33:42.585759' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:33:42.585759',)
+[19/Aug/2018 17:33:42] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:34:09] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:34:09.810692' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:34:09.810692',)
+[19/Aug/2018 17:34:09] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:34:22] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:34:22.870410' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:34:22.870410',)
+[19/Aug/2018 17:34:22] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:34:47] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:34:47.552147' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:34:47.552147',)
+[19/Aug/2018 17:34:47] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:35:15] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:35:15.760363' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:35:15.760363',)
+[19/Aug/2018 17:35:15] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:36:33] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:36:33.516244' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:36:33.516244',)
+[19/Aug/2018 17:36:33] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:36:47] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:36:47.731416' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:36:47.731416',)
+[19/Aug/2018 17:36:47] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:36:55] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:36:55.031131' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:36:55.031131',)
+[19/Aug/2018 17:36:55] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:37:05] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:37:05.662187' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:37:05.662187',)
+[19/Aug/2018 17:37:05] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:37:11] DEBUG [django.db.backends:111] (0.000) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:37:11.569881' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:37:11.569881',)
+[19/Aug/2018 17:37:11] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:37:25] DEBUG [django.db.backends:111] (0.001) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:37:25.702126' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:37:25.702126',)
+[19/Aug/2018 17:37:25] DEBUG [django.db.backends:111] (0.000) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:38:11] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:38:10.982692' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:38:10.982692',)
+[19/Aug/2018 17:38:11] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)
+[19/Aug/2018 17:38:53] DEBUG [django.db.backends:111] (0.004) SELECT "blog_post"."id", "blog_post"."author_id", "blog_post"."title", "blog_post"."text", "blog_post"."created_date", "blog_post"."published_date" FROM "blog_post" WHERE "blog_post"."published_date" <= '2018-08-19 21:38:53.185034' ORDER BY "blog_post"."published_date" DESC; args=('2018-08-19 21:38:53.185034',)
+[19/Aug/2018 17:38:53] DEBUG [django.db.backends:111] (0.019) SELECT COUNT(*) AS "__count" FROM "blog_comment" WHERE ("blog_comment"."post_id" = 1 AND "blog_comment"."approved_comment" = 1); args=(1, True)

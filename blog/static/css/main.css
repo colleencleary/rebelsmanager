@@ -1,0 +1,76 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background-color: #efefef;
+    background-image: url(http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/pink.png);
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: scroll;
+}
+header {
+    margin: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    border-bottom: 3px solid #eb3d8c;
+    padding: 20px 40px;
+}
+.row {
+  width: 100%;
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1, header a, header a:visited, header a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+/* h1 a:hover {
+    color: #eb3d8c;
+} */
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #eb3d8c;
+}
+.comment {
+    margin: 20px 0px 20px 20px;
+}
