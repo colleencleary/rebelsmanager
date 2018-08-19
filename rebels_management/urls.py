@@ -24,7 +24,8 @@ urlpatterns = [
 
     path('', include('blog.urls')),
     path('admin/', admin.site.urls),
-    re_path(r'^accounts/login/$', login, name='login', kwargs={'next_page': '/'}),
+    re_path(r'^accounts/login/$', login, name='login'),
     re_path(r'^accounts/logout/$', logout, name='logout', kwargs={'next_page': '/'}),
+    path(r'^accounts/profile/$', kwargs={'next_page': '/'}),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
