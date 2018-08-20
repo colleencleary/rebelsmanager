@@ -10,7 +10,7 @@ from .forms import PostForm, CommentForm
 
 # from django.conf import settings
 
-@login_required(login_url='/accounts/login/')
+@login_required
 def main_page(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'main_page/mainpage.html', {'posts': posts})
@@ -60,6 +60,7 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
 
+@login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
