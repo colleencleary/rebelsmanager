@@ -4,29 +4,61 @@
         <meta charset="utf-8">
         <title>Rebels Manager</title>
         <link rel="shortcut icon" href="http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/skate.png">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
         <link rel="stylesheet" href="{% static '/css/main.css' %}">
     </head>
-    <body class="custom-background">
-        <header>
-          <div class="row">
+    <body>
+      <header>
+        <div class="header-row">
           <a href="http://www.longislandrollerrebels.org"><img src="http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/lirr-logo.png" style="width:200px; height:128px" alt="LONG ISLAND ROLLER REBELS"></a>
           <h1><a href="/">Rebels Manager</a></h1>
         </div>
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
-                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}?next=/">Log out</a>)</small></p>
-            {% else %}
-                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-            {% endif %}
-        </header>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
-        </div>
-    </body>
+          <nav>
+          {% if user.is_authenticated %}
+              <!-- <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a> -->
+              <!-- <div class="nav-item">
+                <div class="inner-left"> -->
+                  <p>Welcome back, {{ user.username }}!</p>
+                <!-- </div>
+              </div> -->
+              <div class="nav-item">
+                <a href="/">Main</a>
+                <a href="{% url 'post_list' %}">News</a>
+                <a href="">Forum</a>
+                <a href="">Calendar</a>
+                <a href="">Members</a>
+                <a href="">Groups</a>
+                <a href="">Account</a>
+                  <div class="animate-svg">
+                    <svg class="speed-lines" height="33px" width="20px">
+                      <line x1="1" y1="31" x2="20" y2="31" style="stroke:#eb3d8c; stroke-width:2; stroke-linecap:round"/>
+                      <line x1="6" y1="27" x2="13" y2="27" style="stroke:#eb3d8c; stroke-width:2; stroke-linecap:round"/>
+                        <!-- <line x1="8" y1="10" x2="13" y2="10" style="stroke:#eb3d8c; stroke-width:2; stroke-linecap:round"/>
+                        <line x1="9" y1="5" x2="20" y2="5" style="stroke:#eb3d8c; stroke-width:2; stroke-linecap:round"/> -->
+                    </svg>
+                    <svg class="menu-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 512c140.957031 0 256-115.046875 256-256 0-140.957031-115.050781-256-256-256-140.960938 0-256 115.050781-256 256 0 140.960938 115.050781 256 256 256zm0-482c124.617188 0 226 101.382812 226 226s-101.382812 226-226 226-226-101.382812-226-226 101.382812-226 226-226zm0 0"/><path d="m256 301c24.8125 0 45-20.1875 45-45s-20.1875-45-45-45-45 20.1875-45 45 20.1875 45 45 45zm0-60c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m256 421c92.042969 0 165-74.660156 165-165 0-10.175781-1.78125-27.273438-1.957031-28-9.554688-39.6875-20.238281-63.667969-53.042969-95.117188-13.214844-12.667968-42.195312-29.050781-56-33.050781-18.289062-5.296875-31.894531-8.832031-54-8.832031-90.953125 0-165 73.5625-165 165 0 91.179688 73.988281 165 165 165zm-19.992188-31.46875 14.261719-28.53125h11.460938l14.265625 28.53125c-13.183594 1.953125-26.808594 1.953125-39.988282 0zm125.632813-49.457031-17.570313-26.613281 5.726563-9.921876 31.867187 1.910157c-4.902343 12.460937-11.644531 24.121093-20.023437 34.625zm20.023437-133.523438-31.867187 1.910157-5.726563-9.921876 17.570313-26.613281c8.378906 10.503907 15.121094 22.164063 20.023437 34.625zm-105.671874-84.082031-14.261719 28.53125h-11.460938l-14.265625-28.53125c13.183594-1.953125 26.808594-1.953125 39.988282 0zm-125.632813 49.457031 17.574219 26.613281-5.730469 9.921876-31.867187-1.910157c4.902343-12.460937 11.644531-24.121093 20.023437-34.625zm-29.359375 84.074219c0-6.667969.492188-13.316406 1.457031-19.871094l56.453125 3.390625 24.273438-42.039062-31.152344-47.179688c10.453125-8.3125 22.050781-15.011719 34.402344-19.894531l25.296875 50.59375h48.539062l25.300781-50.601562c12.355469 4.886718 23.960938 11.613281 34.394532 19.90625l-31.148438 47.175781 24.269532 42.039062 56.457031-3.390625c.964843 6.554688 1.457031 13.199219 1.457031 19.871094s-.492188 13.316406-1.460938 19.871094l-56.449218-3.390625-24.273438 42.039062 31.148438 47.175781c-10.457032 8.324219-22.042969 15.027344-34.394532 19.902344l-25.300781-50.597656h-48.539062l-25.300781 50.597656c-12.367188-4.886718-23.964844-11.601562-34.398438-19.898437l31.152344-47.179688-24.269532-42.039062-56.457031 3.390625c-.964843-6.554688-1.457031-13.203125-1.457031-19.871094zm41.203125 47.539062 5.730469 9.921876-17.574219 26.613281c-8.378906-10.503907-15.121094-22.164063-20.023437-34.625zm0 0"/>
+                    </svg>
+                  </div>
+                <a class="logout-link"href="{% url 'logout' %}?next=/">log out</a>
+              </div>
+          {% endif %}
+        </nav>
+      </header>
+      <div class="container content">
+          {% block content %}
+          {% endblock %}
+      </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.animate-svg').click(function() {
+        $('svg .menu-icon').attr("begin", 2);
+        $('svg .speed-lines').attr("begin", 3);
+      })
+    </script>
+  </body>
 </html>
