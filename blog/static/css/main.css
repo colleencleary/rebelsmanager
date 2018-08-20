@@ -98,6 +98,9 @@ form {
   margin: 0 auto;
   width: 255px;
 }
+input {
+  color: #000;
+}
 input[type="submit"] {
   margin: 10px;
   background: #eb3d8c;
