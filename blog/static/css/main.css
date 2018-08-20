@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #efefef;
-    background-image: url(http://www.longislandrollerrebels.org/wp-content/uploads/2015/02/pink.png);
+    background-image: url('../assets/pink.png');
     background-repeat: repeat;
     background-position: top center;
     background-attachment: scroll;
