@@ -12,9 +12,15 @@
     </head>
     <body>
       <header>
-        <div class="header-row">
-          <a href="http://www.longislandrollerrebels.org"><img src="{% static '/assets/lirr-logo.png' %}" style="width:200px; height:128px" alt="LONG ISLAND ROLLER REBELS"></a>
-          <h1><a href="/">Rebels Manager</a></h1>
+        <div class="toolbar">
+          <form id="searchform" action="{% url 'search_list_view' %}" method="get" accept-charset="utf-8">
+            <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+            <button class="searchbutton" type="submit">GO!</button>
+          </form>
+        </div>
+        <div class="header-logo">
+          <a href="/"><img src="{% static '/assets/lirr-logo.png' %}" alt="Long Island Roller Rebels"></a>
+          <!-- <h1><a href="/">Rebels Manager</a></h1> -->  
         </div>
           <nav>
           {% if user.is_authenticated %}

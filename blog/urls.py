@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.main_page, name='main_page'),
     path('post', views.post_list, name='post_list'),
+    path('results/', views.BlogSearchListView.get_queryset, name='search_list_view'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),

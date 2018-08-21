@@ -16,25 +16,38 @@ header {
     background-color: rgba(0,0,0,.7);
     width: 100%;
     border-bottom: 3px solid #eb3d8c;
-    padding: 20px 0 0 0;
+    /* padding: 20px 0 0 0; */
 }
-.header-row {
+.header-logo {
   width: 100%;
+  margin-top: -50px;
   padding: 10px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.header-row a {
-  width: 50%;
+.header-logo a {
+  width: 100%;
 }
-.header-row img {
-  margin: 10px 20px ;
+.header-logo img {
+  /* margin: 10px 20px ; */
+  width: 300px;
+  height: auto;
 }
-.header-row h1, .header-row a, .header-row a:visited, .header-row a:active, .header-row a:hover {
+.header-logo h1, .header-logo a, .header-logo a:visited, .header-logo a:active, .header-logo a:hover {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 20pt;
     text-decoration: none;
+}
+.toolbar {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+.toolbar form {
+  margin: 0;
 }
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
@@ -101,13 +114,13 @@ form {
 input {
   color: #000;
 }
-input[type="submit"] {
+input[type="submit"], button {
   margin: 10px;
   background: #eb3d8c;
   border: 1px solid #eb3d8c;
   font-size: 1.3em;
 }
-input[type="submit"]:hover {
+input[type="submit"]:hover, button:hover {
   color: #eb3d8c;
   background: #fff;
   border: 1px solid #eb3d8c;
