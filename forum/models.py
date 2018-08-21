@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class Post(models.Model):
+class ForumPost(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
@@ -18,11 +18,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def approved_comments(self):
-        return self.comments.filter(approved_comment=True)
-
-class Comment(models.Model):
-    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
+class ForumComment(models.Model):
+    forumpost = models.ForeignKey('forum.ForumPost', on_delete=models.CASCADE, related_name='forumcomments')
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)

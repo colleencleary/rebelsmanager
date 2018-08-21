@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+  <div class="row justify-content-between">
+    <div class="col">
+      <h3>Forum Tools</h3>
+      <div class="post">
+        <div class="post-tools">
+          <a href="{% url 'forum_new' %}"><span class="glyphicon glyphicon-plus"></span> Add New Post</a>
+          <a href="">View Your Posts</a>
+          <form id="searchform" action="{% url 'search_list_view' %}" method="get" accept-charset="utf-8">
+            <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+            <button class="searchbutton" type="submit">search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      <div class="col-9">
+          <div class="">
+            <h2>Forum</h2>
+            <div class="post">
+              {% for forumpost in forumposts %}
+              <div class="post-container">
+                <h1><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h1>
+                <div class="date">
+                  <p>published: {{ forumpost.published_date }}</p>
+                </div>
+                <p>{{ forumpost.text|linebreaksbr }}</p>
+                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.comments.count }}</a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+  </div>
+{% endblock %}

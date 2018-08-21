@@ -2,39 +2,48 @@
 {% block content %}
   <div class="row justify-content-between">
     <div class="col">
-      <h3>Upcoming</h3>
+      <h3><a class="column-header" href="">Calendar</a></h3>
       <div class="post">
         <p>calendar here</p>
       </div>
     </div>
-    {% for post in posts %}
       <div class="col-6">
         <div class="">
-          <h2>News</h2>
-          <div class="post">
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <div class="date">
-              <p>published: {{ post.published_date }}</p>
+          <h2><a class="column-header" href="{% url 'post_list'%}">News</a></h2>
+            <div class="post">
+              {% for post in posts|slice:":3" %}
+              <div class="post-container">
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <div class="date">
+                  <p>published: {{ post.published_date }}</p>
+                </div>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+              </div>
+              <a href="{% url 'post_list' %}">View All</a>
+            {% endfor %}
             </div>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+          </div>
+
+          <div class="">
+            <h2><a class="column-header" href="{% url 'forum_list' %}">Forum</a></h2>
+            <div class="post">
+              {% for forumpost in forumposts|slice:":3" %}
+              <div class="post-container">
+                <h1><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h1>
+                <div class="date">
+                  <p>published: {{ forumpost.published_date }}</p>
+                </div>
+                <p>{{ forumpost.text|linebreaksbr }}</p>
+                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.comments.count }}</a>
+              </div>
+              {% endfor %}
+              <a href="{% url 'forum_list' %}">View All</a>
+            </div>
           </div>
         </div>
-        <div class="">
-          <h2>Forum</h2>
-          <div class="post">
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <div class="date">
-              <p>published: {{ post.published_date }}</p>
-            </div>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
     <div class="col">
-      <h3>Placeholder</h3>
+      <h3><a class="column-header" href="">Placeholder</a></h3>
       <div class="post">
         <p>something</p>
       </div>
