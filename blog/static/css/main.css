@@ -44,11 +44,27 @@ header {
 .toolbar {
   width: 100%;
   display: inline-flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .toolbar form {
   margin: 0;
 }
+.toolbar ul {
+  display: inline-flex;
+  list-style-type: none;
+  width: 200px;
+  padding: 0;
+  margin-left: 15px;
+  justify-content: space-around;
+  font-size: 26px;
+}
+.toolbar a:hover {
+  color: #eb3d8c;
+}
+.toolbar a {
+  color: #ddd;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
     margin: 0;
@@ -64,6 +80,7 @@ h2, h3 {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
+
 nav {
   width: 100%;
   padding: 0 20px;

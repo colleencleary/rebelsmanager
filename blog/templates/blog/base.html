@@ -7,12 +7,35 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
         <link rel="stylesheet" href="{% static '/css/main.css' %}">
     </head>
     <body>
       <header>
         <div class="toolbar">
+            <ul class="social-list">
+              <li>
+                <a href="https://www.facebook.com/LongIslandRollerRebels" target="_blank">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/LIRollerRebels/" target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/lirollerrebels/" target="_blank">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/user/LIRollerRebels" target="_blank">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
           <form id="searchform" action="{% url 'search_list_view' %}" method="get" accept-charset="utf-8">
             <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
             <button class="searchbutton" type="submit">GO!</button>
@@ -20,7 +43,7 @@
         </div>
         <div class="header-logo">
           <a href="/"><img src="{% static '/assets/lirr-logo.png' %}" alt="Long Island Roller Rebels"></a>
-          <!-- <h1><a href="/">Rebels Manager</a></h1> -->  
+          <!-- <h1><a href="/">Rebels Manager</a></h1> -->
         </div>
           <nav>
           {% if user.is_authenticated %}
