@@ -17,7 +17,7 @@
                 <div class="date">
                   <p>published: {{ post.published_date }}</p>
                 </div>
-                <p class="post-body">{{ post.text|linebreaksbr }}</p>
+                <p class="post-body">{{ post.text|truncatewords:50|linebreaksbr }} <a href="{% url 'post_detail' pk=post.pk %}">read more</a></p>
                 <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} comments: </a>
               </div>
             {% endfor %}
@@ -34,7 +34,7 @@
                 <div class="date">
                   <p>published: {{ forumpost.published_date }}</p>
                 </div>
-                <p class="post-body">{{ forumpost.text|linebreaksbr }}</p>
+                <p class="post-body">{{ forumpost.text|truncatewords:50|linebreaksbr }} <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a></p>
                 <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} comments</a>
               </div>
               {% endfor %}
