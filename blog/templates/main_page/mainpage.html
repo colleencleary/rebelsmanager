@@ -20,8 +20,8 @@
                 <p>{{ post.text|linebreaksbr }}</p>
                 <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
               </div>
-              <a href="{% url 'post_list' %}">View All</a>
             {% endfor %}
+            <a class="pull-right" href="{% url 'post_list' %}">View All</a>
             </div>
           </div>
 
@@ -38,7 +38,7 @@
                 <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.forumcomments.count }}</a>
               </div>
               {% endfor %}
-              <a href="{% url 'forum_list' %}">View All</a>
+              <a class="pull-right" href="{% url 'post_list' %}">View All</a>
             </div>
           </div>
         </div>

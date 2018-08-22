@@ -162,9 +162,9 @@ table {
 .post {
     background: #fff;
     margin-bottom: 20px;
-    padding: 5px 15px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    padding: 15px 15px 25px 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     color: #000;
 }
 .post a:hover {
@@ -177,7 +177,7 @@ table {
   padding: 20px 0;
 }
 .post-container {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 .post-tools {
   display: inline-flex;
