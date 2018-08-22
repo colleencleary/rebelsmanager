@@ -17,8 +17,18 @@
                 <div class="date">
                   <p>published: {{ post.published_date }}</p>
                 </div>
-                <p class="post-body">{{ post.text|truncatewords:50|linebreaksbr }} <a href="{% url 'post_detail' pk=post.pk %}">read more</a></p>
-                <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} comments: </a>
+                <p class="post-body">{{ post.text|truncatewords:50|linebreaksbr }}
+                  {% if post.text|wordcount > 50 %}
+                    <a href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                  {% endif %}
+                </p>
+
+                  {% if post.comments.count == 1 %}
+                    <a href="{% url 'post_detail' pk=post.pk %}">1 comment</a>
+                  {% else %}
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.comments.count }} comments</a>
+                  {% endif %}
+
               </div>
             {% endfor %}
             <a class="pull-right" href="{% url 'post_list' %}">View All</a>
@@ -34,8 +44,16 @@
                 <div class="date">
                   <p>published: {{ forumpost.published_date }}</p>
                 </div>
-                <p class="post-body">{{ forumpost.text|truncatewords:50|linebreaksbr }} <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a></p>
-                <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} comments</a>
+                <p class="post-body">{{ forumpost.text|truncatewords:50|linebreaksbr }}
+                  {% if forumpost.text|wordcount > 50 %}
+                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a>
+                  {% endif %}
+                  </p>
+                  {% if forumpost.forumcomments.count == 1 %}
+                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">1 comment</a>
+                  {% else %}
+                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} comments</a>
+                  {% endif %}
               </div>
               {% endfor %}
               <a class="pull-right" href="{% url 'post_list' %}">View All</a>
