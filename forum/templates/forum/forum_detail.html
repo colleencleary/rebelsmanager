@@ -16,7 +16,7 @@
 </div>
 <hr>
 <a class="btn btn-default" href="{% url 'add_comment_to_forumpost' pk=forumpost.pk %}">Add comment</a>
-{% for comment in forumpost.forumcomments.all %}
+{% for comment in forumpost.forumcomments.all|dictsortreversed:"created_date" %}
     {% if user.is_authenticated or comment.approved_comment %}
     <div class="comment">
         <div class="date">

@@ -1,13 +1,13 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-  <div class="row justify-content-between">
-    <div class="col">
+  <div class="row justify-content-center">
+    <div class="narrowcol">
       <h3><a class="column-header" href="">Calendar</a></h3>
       <div class="post">
         <p>calendar here</p>
       </div>
     </div>
-      <div class="col-6">
+      <div class="widecol">
         <div class="">
           <h2><a class="column-header" href="{% url 'post_list'%}">News</a></h2>
             <div class="post">
@@ -40,9 +40,9 @@
             <div class="post">
               {% for forumpost in forumposts|slice:":3" %}
               <div class="post-container">
-                <h1><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h1>
+                <h4><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h4>
                 <div class="date">
-                  <p>published: {{ forumpost.published_date }}</p>
+                  <p>started by {{ forumpost.author }} on {{ forumpost.published_date }}</p>
                 </div>
                 <p class="post-body">{{ forumpost.text|truncatewords:50|linebreaksbr }}
                   {% if forumpost.text|wordcount > 50 %}
@@ -50,21 +50,23 @@
                   {% endif %}
                   </p>
                   {% if forumpost.forumcomments.count == 1 %}
-                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">1 comment</a>
+
+                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">1 reply
                   {% else %}
-                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} comments</a>
+                    <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} replies
                   {% endif %}
+                  {% if forumpost.forumcomments.count > 0 %}
+                    {% with forumpost.forumcomments.all|dictsortreversed:"created_date"|first as first_comment %}
+                      |  Last reply by {{ first_comment.author }} on {{ first_comment.created_date }}
+                    {% endwith %}
+                  {% endif %}
+                </a>
               </div>
               {% endfor %}
               <a class="pull-right" href="{% url 'post_list' %}">View All</a>
             </div>
           </div>
         </div>
-    <div class="col">
-      <h3><a class="column-header" href="">Placeholder</a></h3>
-      <div class="post">
-        <p>something</p>
-      </div>
-    </div>
+
   </div>
 {% endblock %}
