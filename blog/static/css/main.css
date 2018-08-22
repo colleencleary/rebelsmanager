@@ -177,7 +177,15 @@ table {
   padding: 20px 0;
 }
 .post-container {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 10px;
+}
+.post-container h1 {
+  padding-bottom: 10px;
+}
+.post-body {
+  padding: 10px;
 }
 .post-tools {
   display: inline-flex;

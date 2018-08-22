@@ -17,8 +17,8 @@
                 <div class="date">
                   <p>published: {{ post.published_date }}</p>
                 </div>
-                <p>{{ post.text|linebreaksbr }}</p>
-                <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+                <p class="post-body">{{ post.text|linebreaksbr }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} comments: </a>
               </div>
             {% endfor %}
             <a class="pull-right" href="{% url 'post_list' %}">View All</a>
@@ -34,8 +34,8 @@
                 <div class="date">
                   <p>published: {{ forumpost.published_date }}</p>
                 </div>
-                <p>{{ forumpost.text|linebreaksbr }}</p>
-                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.forumcomments.count }}</a>
+                <p class="post-body">{{ forumpost.text|linebreaksbr }}</p>
+                <a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.forumcomments.count }} comments</a>
               </div>
               {% endfor %}
               <a class="pull-right" href="{% url 'post_list' %}">View All</a>
