@@ -25,7 +25,7 @@
                   <p>published: {{ forumpost.published_date }}</p>
                 </div>
                 <p>{{ forumpost.text|linebreaksbr }}</p>
-                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.comments.count }}</a>
+                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.forumcomments.count }}</a>
               </div>
               {% endfor %}
             </div>

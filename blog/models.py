@@ -26,7 +26,7 @@ class Comment(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-    approved_comment = models.BooleanField(default=False)
+    approved_comment = models.BooleanField(default=True)
 
     def approve(self):
         self.approved_comment = True

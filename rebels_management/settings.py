@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'rebelsmanager',
-        'USER': 'name',
+        'USER': 'mars667',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',

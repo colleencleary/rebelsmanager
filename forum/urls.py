@@ -8,7 +8,7 @@ urlpatterns = [
     path('forum/<int:pk>/edit/', views.forum_edit, name='forum_edit'),
     re_path(r'^forum/(?P<pk>\d+)/remove/$', views.forum_remove, name='forum_remove'),
     re_path(r'^forum/(?P<pk>\d+)/comment/$', views.add_comment_to_forumpost, name='add_comment_to_forumpost'),
-    re_path(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
+    re_path(r'^forum/comment/(?P<pk>\d+)/remove/$', views.forumcomment_remove, name='forumcomment_remove'),
 
 
 ]

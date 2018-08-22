@@ -62,6 +62,7 @@ def add_comment_to_forumpost(request, pk):
         form = CommentForm(request.POST)
         if form.is_valid():
             forumcomment = form.save(commit=False)
+            forumcomment.author = request.user
             forumcomment.forumpost = forumpost
             forumcomment.save()
             return redirect('forum_detail', pk=forumpost.pk)
@@ -70,7 +71,7 @@ def add_comment_to_forumpost(request, pk):
     return render(request, 'forum/add_comment_to_forumpost.html', {'form': form})
 
 @login_required
-def comment_remove(request, pk):
+def forumcomment_remove(request, pk):
     forumcomment = get_object_or_404(ForumComment, pk=pk)
     forumcomment.delete()
     return redirect('forum_detail', pk=forumcomment.forumpost.pk)
