@@ -18,7 +18,17 @@ def forum_list(request):
 @login_required
 def forum_detail(request, pk):
     forumpost = get_object_or_404(ForumPost, pk=pk)
-    return render(request, 'forum/forum_detail.html', {'forumpost': forumpost})
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            forumcomment = form.save(commit=False)
+            forumcomment.author = request.user
+            forumcomment.forumpost = forumpost
+            forumcomment.save()
+            return redirect('forum_detail', pk=forumpost.pk)
+    else:
+        form = CommentForm()
+    return render(request, 'forum/forum_detail.html', {'forumpost': forumpost, 'form': form})
 
 @login_required
 def forum_new(request):
