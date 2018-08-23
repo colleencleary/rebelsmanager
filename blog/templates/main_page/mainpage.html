@@ -2,9 +2,18 @@
 {% block content %}
   <div class="row justify-content-center">
     <div class="narrowcol">
-      <h3><a class="column-header" href="">Calendar</a></h3>
-      <div class="post">
-        <p>calendar here</p>
+      <div>
+        <h3><a class="column-header" href="">Calendar</a></h3>
+        <div class="post">
+          <p>calendar here</p>
+        </div>
+      </div>
+
+      <div class="contact-div">
+        <h3><a class="column-header" href="">Contact</a></h3>
+        <div class="post">
+          <p>contact info</p>
+        </div>
       </div>
     </div>
       <div class="widecol">
@@ -17,7 +26,8 @@
                 <div class="date">
                   <p>published: {{ post.published_date }}</p>
                 </div>
-                <p class="post-body">{{ post.text|truncatewords:50|linebreaksbr }}
+                <p class="post-body container">
+                  {{ post.text|linebreaksbr|truncatewords:50 }}
                   {% if post.text|wordcount > 50 %}
                     <a href="{% url 'post_detail' pk=post.pk %}">read more</a>
                   {% endif %}
@@ -39,12 +49,12 @@
             <h2><a class="column-header" href="{% url 'forum_list' %}">Forum</a></h2>
             <div class="post">
               {% for forumpost in forumposts|slice:":3" %}
-              <div class="post-container">
+              <div class="post-container forum-list">
                 <h4><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h4>
                 <div class="date">
                   <p>started by {{ forumpost.author }} on {{ forumpost.published_date }}</p>
                 </div>
-                <p class="post-body">{{ forumpost.text|truncatewords:50|linebreaksbr }}
+                <p class="post-body container">{{ forumpost.text|linebreaksbr|truncatewords:50 }}
                   {% if forumpost.text|wordcount > 50 %}
                     <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a>
                   {% endif %}

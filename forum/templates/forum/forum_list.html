@@ -2,14 +2,14 @@
 {% block content %}
   <div class="row justify-content-between">
     <div class="col">
-      <h3>Forum Tools</h3>
+      <h3>Tools</h3>
       <div class="post">
         <div class="post-tools">
           <a href="{% url 'forum_new' %}"><span class="glyphicon glyphicon-plus"></span> Add New Post</a>
-          <a href="">View Your Posts</a>
+          <a href=""><span class="fa fa-archive"></span> View Your Posts</a>
           <form id="searchform" action="{% url 'search_list_view' %}" method="get" accept-charset="utf-8">
             <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
-            <button class="searchbutton" type="submit">search</button>
+            <button class="searchbutton pull-right" type="submit">search</button>
           </form>
         </div>
       </div>
@@ -18,16 +18,38 @@
           <div class="">
             <h2>Forum</h2>
             <div class="post">
-              {% for forumpost in forumposts %}
-              <div class="post-container">
-                <h1><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h1>
-                <div class="date">
-                  <p>published: {{ forumpost.published_date }}</p>
-                </div>
-                <p>{{ forumpost.text|linebreaksbr }}</p>
-                <a href="{% url 'forum_detail' pk=forumpost.pk %}">Comments: {{ forumpost.forumcomments.count }}</a>
-              </div>
-              {% endfor %}
+                <table class="table table-striped">
+                  <tr>
+                    <th><h3>Topic</h3></th>
+                    <th><h3>Replies</h3></th>
+                    <th><h3>Latest Activity</h3></th>
+                  </tr>
+                {% for forumpost in forumposts %}
+                  <tr>
+                    <td class="table-details">
+                      <h4><a href="{% url 'forum_detail' pk=forumpost.pk %}">{{ forumpost.title }}</a></h4>
+                      <div class="date">
+                        <p>started by {{ forumpost.author }} on {{ forumpost.published_date }}</p>
+                      </div>
+                      <p class="post-body container">{{ forumpost.text|linebreaksbr|truncatewords:30 }}
+                        {% if forumpost.text|wordcount > 30 %}
+                          <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a>
+                        {% endif %}
+                      </p>
+                    </td>
+                    <td class="table-count align-middle">
+                      <p>{{ forumpost.forumcomments.count }}</p>
+                    </td>
+                    <td class="table-replies align-middle">
+                      {% if forumpost.forumcomments.count > 0 %}
+                        {% with forumpost.forumcomments.all|dictsortreversed:"created_date"|first as first_comment %}
+                          <p>{{ first_comment.created_date }} by {{ first_comment.author }}</p>
+                        {% endwith %}
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+                </table>
             </div>
           </div>
         </div>

@@ -6,10 +6,10 @@
       <div class="post">
         <div class="post-tools">
           <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span> Add New Post</a>
-          <a href="">View Your Posts</a>
+          <a href=""><span class="fa fa-archive"></span> View Your Posts</a>
           <form id="searchform" action="{% url 'search_list_view' %}" method="get" accept-charset="utf-8">
             <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
-            <button class="searchbutton" type="submit">search</button>
+            <button class="searchbutton pull-right" type="submit">search</button>
           </form>
         </div>
       </div>
@@ -24,7 +24,12 @@
                 <div class="date">
                   <p>published: {{ post.published_date }}</p>
                 </div>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <p class="post-body container">
+                  {{ post.text|linebreaksbr|truncatewords:50 }}
+                  {% if post.text|wordcount > 50 %}
+                    <a href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                  {% endif %}
+                </p>
                 <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
               </div>
               {% endfor %}

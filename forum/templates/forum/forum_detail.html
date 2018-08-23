@@ -1,37 +1,49 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="forumpost">
-  {% if forumpost.published_date %}
-  <div class="date">
-    {{ forumpost.published_date }}
-  </div>
-  {% endif %}
-  {% if user.is_authenticated %}
-  <a class="btn btn-default" href="{% url 'forum_edit' pk=forumpost.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-  <a class="btn btn-default" href="{% url 'forum_remove' pk=forumpost.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-  {% endif %}
+<div class="post container col-8">
+  <a href="{% url 'forum_list' %}"> <i class="fa fa-caret-left"></i> Back to Forum</a>
+  <div class="detail-container">
+    {% if user == forumpost.author %}
+      <a class="btn btn-default pull-right" href="{% url 'forum_edit' pk=forumpost.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a class="btn btn-default pull-right" href="{% url 'forum_remove' pk=forumpost.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+      {% endif %}
   <h1>{{ forumpost.title }}</h1>
-  <p>{{ forumpost.text|linebreaksbr }}</p>
+  <div class="date align-bottom">
+    posted by {{ forumpost.author }} on {{ forumpost.published_date }}
+  </div>
+  <div class="container">
+    <p>{{ forumpost.text|linebreaksbr }}</p>
+  </div>
 </div>
-<hr>
-<a class="btn btn-default" href="{% url 'add_comment_to_forumpost' pk=forumpost.pk %}">Add comment</a>
-{% for comment in forumpost.forumcomments.all|dictsortreversed:"created_date" %}
-    {% if user.is_authenticated or comment.approved_comment %}
-    <div class="comment">
-        <div class="date">
-            {{ comment.created_date }}
-            {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-            {% endif %}
-        </div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
+
+<div class="comment-container">
+  <div id="commentform-container">
+    <h4 onclick="showCommentForm()">Reply <i id="toggle-icon" class="fa fa-caret-right"></i></h4>
+    <div id="comment-form">
+      {% include "./add_comment_to_forumpost.html" %}
     </div>
-    {% endif %}
+  </div>
+{% for comment in forumpost.forumcomments.all|dictsortreversed:"created_date" %}
+{% if user.is_authenticated %}
+<div class="comment">
+  <hr>
+  <div class="date">
+    reply by <strong>{{ comment.author }}</strong> on {{ comment.published_date }}:
+    {% if comment.author == user %}
+    <div class="pull-right">
+      <!-- <a class="btn btn-default" href="{% url 'comment_edit' pk=comment.pk %}"><span class="glyphicon glyphicon-pencil"></span></a> -->
+      <a class="btn btn-default" href="{% url 'forumcomment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+  {% endif %}
+  </div>
+  <p>{{ comment.text|linebreaks }}</p>
+</div>
+{% endif %}
 {% empty %}
-    <p>No comments here yet :(</p>
+<p>No comments yet</p>
 {% endfor %}
+</div>
+</div>
 
 {% endblock %}
