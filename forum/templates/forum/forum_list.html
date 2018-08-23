@@ -31,11 +31,11 @@
                       <div class="date">
                         <p>started by {{ forumpost.author }} on {{ forumpost.published_date }}</p>
                       </div>
-                      <p class="post-body container">{{ forumpost.text|linebreaksbr|truncatewords:30 }}
-                        {% if forumpost.text|wordcount > 30 %}
+                      <p class="post-body container"><small>{{ forumpost.text|linebreaksbr|truncatewords:20 }}
+                        {% if forumpost.text|wordcount > 20 %}
                           <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a>
                         {% endif %}
-                      </p>
+                      </small></p>
                     </td>
                     <td class="table-count align-middle">
                       <p>{{ forumpost.forumcomments.count }}</p>
