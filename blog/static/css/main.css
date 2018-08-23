@@ -308,7 +308,41 @@ input[type="text"] {
   margin: 0 5px;
 }
 .narrowcol .post {
-  padding: 200px 20px;
+  padding: 5px;
+}
+.narrowcol ul {
+  padding-left: 30px;
+}
+.narrowcol table {
+  margin: 10px auto;
+}
+.narrowcol th {
+  color: #000;
+}
+.narrowcol td {
+  padding: 3px;
+  color: #666;
+  text-align: center;
+}
+.narrowcol a {
+  color: #eb3d8c;
+}
+.narrowcol h4 {
+  text-align: center;
+}
+.email {
+  text-transform: lowercase;
+  color: #eb3d8c;
+}
+.schedule ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.schedule h4 {
+  text-align: left;
+}
+.schedule li {
+  padding: 5px;
 }
 footer {
   background: rgba(0,0,0,.7);
