@@ -214,13 +214,13 @@
                     <a href="{% url 'post_detail' pk=post.pk %}">read more</a>
                   {% endif %}
                 </p>
-
+                <p class="post-body container">
                   {% if post.comments.count == 1 %}
                     <a href="{% url 'post_detail' pk=post.pk %}">1 comment</a>
                   {% else %}
                     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.comments.count }} comments</a>
                   {% endif %}
-
+                </p>
               </div>
             {% endfor %}
             <a class="pull-right" href="{% url 'post_list' %}">View All</a>
@@ -241,6 +241,7 @@
                     <a href="{% url 'forum_detail' pk=forumpost.pk %}">read more</a>
                   {% endif %}
                   </p>
+                  <p class="post-body container">
                   {% if forumpost.forumcomments.count == 1 %}
 
                     <a href="{% url 'forum_detail' pk=forumpost.pk %}">1 reply
@@ -253,6 +254,7 @@
                     {% endwith %}
                   {% endif %}
                 </a>
+              </p>
               </div>
               {% endfor %}
               <a class="pull-right" href="{% url 'post_list' %}">View All</a>
