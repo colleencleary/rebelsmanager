@@ -43,7 +43,7 @@
                     <td class="table-replies align-middle">
                       {% if forumpost.forumcomments.count > 0 %}
                         {% with forumpost.forumcomments.all|dictsortreversed:"created_date"|first as first_comment %}
-                          <p>{{ first_comment.created_date }} by {{ first_comment.author }}</p>
+                          <p><small>{{ first_comment.created_date }} by {{ first_comment.author }}</small></p>
                         {% endwith %}
                       {% endif %}
                     </td>
