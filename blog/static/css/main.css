@@ -219,6 +219,12 @@ float: right;
 .post-tools a {
   margin: 3px 0;
   padding-left: 10px;
+  color: #828282;
+}
+.post-tools a:visited {
+  margin: 3px 0;
+  padding-left: 10px;
+  color: #828282;
 }
 input[type="text"] {
   width: 100%;
