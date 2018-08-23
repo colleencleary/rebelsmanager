@@ -226,6 +226,12 @@ float: right;
   padding-left: 10px;
   color: #828282;
 }
+.post-body a {
+  color: #828282;
+}
+.post-body a:visited {
+  color: #828282;
+}
 input[type="text"] {
   width: 100%;
   margin: 10px 0;
