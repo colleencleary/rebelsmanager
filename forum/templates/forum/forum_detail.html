@@ -24,12 +24,12 @@
       {% include "./add_comment_to_forumpost.html" %}
     </div>
   </div>
-{% for comment in forumpost.forumcomments.all|dictsortreversed:"created_date" %}
+{% for comment in forumpost.forumcomments|dictsortreversed:"created_date" %}
 {% if user.is_authenticated %}
 <div class="comment">
   <hr>
   <div class="date">
-    reply by <strong>{{ comment.author }}</strong> on {{ comment.published_date }}:
+    reply by <strong>{{ comment.author }}</strong> on {{ comment.created_date }}:
     {% if comment.author == user %}
     <div class="pull-right">
       <!-- <a class="btn btn-default" href="{% url 'comment_edit' pk=comment.pk %}"><span class="glyphicon glyphicon-pencil"></span></a> -->
