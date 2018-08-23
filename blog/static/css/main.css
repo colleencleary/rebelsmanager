@@ -347,6 +347,7 @@ input[type="text"] {
 .post .container {
   width: 98%;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 form table {
   margin: 0 auto;
