@@ -371,8 +371,7 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  position: relative;
-  text-align: center;
+  position: fixed;
 }
 footer h1 {
   font-size: 24px;
