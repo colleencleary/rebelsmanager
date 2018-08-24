@@ -24,7 +24,7 @@
       {% include "./add_comment_to_forumpost.html" %}
     </div>
   </div>
-{% for comment in forumpost.forumcomments|dictsortreversed:"created_date" %}
+{% for comment in forumpost.forumcomments.all|dictsortreversed:"created_date" %}
 {% if user.is_authenticated %}
 <div class="comment">
   <hr>
