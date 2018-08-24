@@ -368,8 +368,10 @@ footer {
   background: rgba(0,0,0,.7);
   padding: 30px;
   text-align: center;
+  width: 100%;
   bottom: 0;
   position: absolute;
+  text-align: center;
 }
 footer h1 {
   font-size: 24px;
