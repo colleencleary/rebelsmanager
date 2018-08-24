@@ -8,3 +8,4 @@ built with Django and postgres
 * permission groups
 * calendar/schedule
 * notifications
+* search function
